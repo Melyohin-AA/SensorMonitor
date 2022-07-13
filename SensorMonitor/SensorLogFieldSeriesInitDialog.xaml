@@ -1,0 +1,34 @@
+﻿<Window x:Class="SensorMonitor.SensorLogFieldSeriesInitDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SensorMonitor"
+        mc:Ignorable="d"
+        Title="Инициализация графика" Height="160" Width="400" WindowStyle="ToolWindow">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Column="0" Grid.Row="0" HorizontalContentAlignment="Right" Content="Прибор"/>
+        <Label Grid.Column="0" Grid.Row="1" HorizontalContentAlignment="Right" Content="Поле записей прибора"/>
+        <Label Grid.Column="0" Grid.Row="2" HorizontalContentAlignment="Right" Content="Режим отображения суточных"
+               VerticalAlignment="Center"/>
+        <ComboBox Grid.Column="1" Grid.Row="0" x:Name="sensorComboBox"
+                  SelectionChanged="HandleSensorComboBoxSelectionChangedEvent"/>
+        <ComboBox Grid.Column="1" Grid.Row="1" x:Name="logFieldComboBox"/>
+        <CheckBox Grid.Column="1" Grid.Row="2" x:Name="maxMinDayModeCheckBox" FlowDirection="RightToLeft"
+                  VerticalAlignment="Center" HorizontalAlignment="Left">
+            <TextBlock FlowDirection="LeftToRight" Text="максимума и минимума"/>
+        </CheckBox>
+        <Button Grid.Column="1" Grid.Row="3" HorizontalAlignment="Right" Width="65" Content="Выбрать"
+                Click="HandleSubmitButtonClickedEvent"/>
+    </Grid>
+</Window>

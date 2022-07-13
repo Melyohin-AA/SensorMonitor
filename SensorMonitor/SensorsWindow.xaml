@@ -1,0 +1,29 @@
+﻿<Window x:Class="SensorMonitor.SensorsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SensorMonitor"
+        mc:Ignorable="d"
+        Title="Список приборов" Height="600" Width="400" WindowStyle="ToolWindow">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <ListView Grid.Row="0" x:Name="logSeqListView">
+            <ListView.Resources>
+                <ContextMenu x:Key="logSeqListViewElementMenu">
+                    <MenuItem Header="Удалить прибор" Click="HandleDeleteLogSeqMenuItemClickedEvent"/>
+                    <MenuItem Header="Очистить записи прибора" Click="HandleClearLogSeqMenuItemClickedEvent"/>
+                    <MenuItem Header="Дефрагментировать файл записей прибора"
+                              Click="HandleDefragmentLogSeqFileMenuItemClickedEvent"/>
+                </ContextMenu>
+            </ListView.Resources>
+            <ListView.ContextMenu>
+                <StaticResource ResourceKey="logSeqListViewElementMenu"/>
+            </ListView.ContextMenu>
+        </ListView>
+        <Button Grid.Row="1" Content="Новый прибор…" Click="HandleAddNewSensorButtonClickedEvent"/>
+    </Grid>
+</Window>

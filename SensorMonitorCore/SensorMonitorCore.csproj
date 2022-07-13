@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8D6F4BD2-AF0C-46ED-B041-A401CE6435EC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SensorMonitor.Core</RootNamespace>
+    <AssemblyName>SensorMonitorCore</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Analysis\ChronoValue.cs" />
+    <Compile Include="Analysis\Transform\IValueSeqTransformer.cs" />
+    <Compile Include="Analysis\Transform\PeriodAverageTransformer.cs" />
+    <Compile Include="Analysis\ValueChangeRange.cs" />
+    <Compile Include="Analysis\ISensorLogFieldValueChecker.cs" />
+    <Compile Include="Analysis\ValueChecker.cs" />
+    <Compile Include="Analysis\ValueRange.cs" />
+    <Compile Include="Analysis\ValueIssue.cs" />
+    <Compile Include="Analysis\SensorLogFieldValueChecker.cs" />
+    <Compile Include="SensorLogModel\SensorIdentifier.cs" />
+    <Compile Include="SensorLogModel\SensorLogFieldPath.cs" />
+    <Compile Include="SensorManager.cs" />
+    <Compile Include="SensorIO\FieldValueBinaryReader.cs" />
+    <Compile Include="SensorIO\FieldValueBinaryWriter.cs" />
+    <Compile Include="SensorIO\SensorIOFile.cs" />
+    <Compile Include="SensorIO\LogFormat\Binary\LogFormatBinaryReader.cs" />
+    <Compile Include="SensorIO\LogFormat\Binary\LogFormatBinaryFile.cs" />
+    <Compile Include="SensorIO\LogFormat\Binary\LogFormatBinaryWriter.cs" />
+    <Compile Include="SensorIO\LogFormat\ILogFormatReader.cs" />
+    <Compile Include="SensorIO\LogFormat\ILogFormatWriter.cs" />
+    <Compile Include="SensorIO\Log\Binary\LogChronoFile.cs" />
+    <Compile Include="SensorIO\Log\Binary\LogFieldsBinaryReader.cs" />
+    <Compile Include="SensorIO\Log\Binary\LogFieldsBinaryWriter.cs" />
+    <Compile Include="SensorIO\Log\Csv\CsvLogSeqConverter.cs" />
+    <Compile Include="SensorIO\FieldValueTextParser.cs" />
+    <Compile Include="SensorIO\Log\ILogFieldsReader.cs" />
+    <Compile Include="SensorIO\Log\ILogFieldsWriter.cs" />
+    <Compile Include="SensorIO\Log\ITextStreamLogSeqConverter.cs" />
+    <Compile Include="SensorIO\Log\Json\JsonParser.cs" />
+    <Compile Include="Tools\LogFieldFromDictInitializer.cs" />
+    <Compile Include="SensorIO\Log\LogFieldFromStringValuesInitializer.cs" />
+    <Compile Include="SensorIO\Log\Json\JsonLogConverter.cs" />
+    <Compile Include="SensorIO\Log\Json\JsonLogSeqConverter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SensorLogModel\DateAndTime.cs" />
+    <Compile Include="SensorLogModel\FieldType.cs" />
+    <Compile Include="SensorLogModel\SensorLog.cs" />
+    <Compile Include="SensorLogModel\SensorLogFormat.cs" />
+    <Compile Include="SensorLogModel\SensorLogInfo.cs" />
+    <Compile Include="SensorLogModel\SensorLogFormatTable.cs" />
+    <Compile Include="Tools\BinaryIOFormat\BinaryFormatReader.cs" />
+    <Compile Include="Tools\BinaryIOFormat\BinaryFormatWriter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SensorIO\Log\Web\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

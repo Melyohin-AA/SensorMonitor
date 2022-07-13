@@ -1,0 +1,18 @@
+﻿<Window x:Class="SensorMonitor.SeriesLoadingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SensorMonitor"
+        mc:Ignorable="d"
+        Title="Загрузка данных для графиков" Height="200" Width="400" WindowStyle="ToolWindow">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Content="Идёт загрузка данных для графиков…"/>
+        <Button Grid.Row="1" HorizontalAlignment="Right" Width="120" Content="Прервать загрузку"
+                Click="HandleHaltButtonClickedEvent"/>
+    </Grid>
+</Window>
