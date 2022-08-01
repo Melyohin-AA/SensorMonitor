@@ -5,6 +5,7 @@
 <div align="center">
   <h2 align="center">Sensor Monitor</h2>
   <p align="center">Визуализация данных сети наблюдения К3 МФ МГТУ им. Баумана</p>
+  <p align="right">2021.07 - 2022.03</p>
 </div>
 
 
