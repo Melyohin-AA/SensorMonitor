@@ -1,54 +1,61 @@
-<div id="top"></div>
-
-
-<br />
+<br/>
 <div align="center">
-  <p align="right">2021.07 - 2022.03</p>
   <h2 align="center">Sensor Monitor</h2>
-  <p align="center">Визуализация данных сети наблюдения К3 МФ МГТУ им. Баумана</p>
+  <p align="center">Visualization of the university's monitoring network data</p>
 </div>
 
 
-### О проекте
+### About the project
 
 ![product-screenshot](https://github.com/Melyohin-AA/SensorMonitor/raw/master/_ReadmeFiles/MainImage.png)
 
-Данный проект представляет собой приложение, предназначенное для визуального представления данных, собранных приборами сети наблюдения К3 МФ МГТУ им. Баумана. Продукт разработан в рамках ознакомительной практики.
+The product is the desktop application. It can be used to plot different charts based on data downloaded from the university's database.
 
-Особенности продукта:
-* Импорт данных из БД измерительной сети в форматах JSON и CSV
-* Визуализация данных в виде графиков (ось X - время, ось Y - значение)
-* Выбор данных для графиков
-* Построение графиков за разные временные диапазоны
-* Построение графиков на основе:
-  * сырых данных;
-  * данных, осреднённых за различные периоды времени;
-  * минимальных и максимальных суточных значений;
-* Различные типы графиков:
-  * точки (непосредственно датированные измерения);
-  * ломаная;
-  * кривая;
-  * ступенчатый график;
-* Одновременное отображение на одной плоскости до нескольких графиков
-* Возможность расширения поддерживаемых моделей приборов
-* Целевая ОС - Windows 10
+##### Features
+* Importing data in JSON и CSV formats
+* Visualization of data in the form of charts (X-axis – time, Y-axis – values)
+* Selecting data for charts
+* Plotting charts for different time ranges
+* Charts may be based on:
+  * raw data;
+  * data averaged over different time periods;
+  * minimum and maximum daily values;
+* Different chart types:
+  * dots (explicitly dated measurements);
+  * polyline;
+  * curve line;
+  * stepped line;
+* Display of multiple charts on a plane at once
+* Managing list of supported device models
+* Target OS – Windows 10
 
-Разработка велась на языке программирования `C#` с использованием `.NET Framework 4.7.2`. Среда разработки - `Microsoft Visual Studio 2017`. Тип приложения - `WPF`. Для тестирования использовался `MSTest`. Библиотека, использованная для построения и визуализации, - `LiveCharts`.
+##### Technology stack
+* `C#`
+* `.NET Framework 4.7.2`
+* `LiveCharts`
+* `WPF`
+* `MSTest`
 
 
-### Использование
+### Usage
 
-1. Выполнить сборку и настройку проекта (*ИЛИ* скачать [настроенную сборку проекта](https://drive.google.com/file/d/1EXU2SVFG2bm_i0PqjO7bTzlEQJbZUiyC/view?usp=sharing))
-    1. С помощью Visual Studio выполнить сборку проекта `SensorMonitor`
-    2. Выгрузить данные для визуализации из БД ([страница выгрузки](http://dbrobo.mgul.ac.ru/mainexport.html); для JSON-файла требуется изменить расширение в имени файла на .json)
-    3. Предварительная настройка
-        1. Запустить `SensorMonitor.exe`
-        2. Добавить требуемые форматы записей приборов (`Приборы` > `Форматы записей приборов`)
-        3. Добавить требуемые файлы приборов (`Приборы` > `Список приборов`)
-2. Импортировать выгруженные данные (`Приборы` > `Импортировать выгруженные данные`)
-3. Настроить отображение
-    1. Выбрать временной период для визуализации и осреднение
-    2. Применить настройки (`Показать данные за период`)
-    3. Выбрать вид графиков
-4. Выбрать данные для визуализации (`Добавить график`)
-5. Включить отображение данных (ПКМ по элементу в списке графиков > `Показать/скрыть график`)
+1. Perform compilation and configuration (*OR* download [configured build](https://drive.google.com/file/d/1EXU2SVFG2bm_i0PqjO7bTzlEQJbZUiyC/view?usp=sharing))
+    1. Compile build of the `SensorMonitor` project via Visual Studio compiler
+    2. Download data for visualization from the database ([download page](http://dbrobo.mgul.ac.ru/mainexport.html); for JSON-files it is necessary to change extention to .json)
+    3. Configure the project
+        1. Run `SensorMonitor.exe`
+        2. Add record formats you want to read (`Приборы` > `Форматы записей приборов`)
+        3. Add device files you want to read for (`Приборы` > `Список приборов`)
+2. Import downloaded data (`Приборы` > `Импортировать выгруженные данные`)
+3. Set chart display and plotting parameters
+    1. Select time period for plotting and averaging
+    2. Apply settings (`Показать данные за период`)
+    3. Select chart type
+4. Chose data for plotting (`Добавить график`)
+5. Turn on chart display (RMB click on item in chart list > `Показать/скрыть график`)
+
+
+### Demo
+
+Youtube video:<br/>
+[![Demo](https://img.youtube.com/vi/REFaSrarCGA/0.jpg)](https://youtu.be/REFaSrarCGA)
