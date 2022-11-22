@@ -11,7 +11,7 @@
 
 The product is the desktop application. It can be used to plot different charts based on data downloaded from the university's database.
 
-##### Features
+#### Features:
 * Importing data in JSON и CSV formats
 * Visualization of data in the form of charts (X-axis – time, Y-axis – values)
 * Selecting data for charts
@@ -29,7 +29,7 @@ The product is the desktop application. It can be used to plot different charts 
 * Managing list of supported device models
 * Target OS – Windows 10
 
-##### Technology stack
+#### Technology stack:
 * `C#`
 * `.NET Framework 4.7.2`
 * `LiveCharts`
