@@ -9,7 +9,7 @@
 
 ![product-screenshot](https://github.com/Melyohin-AA/SensorMonitor/raw/master/_ReadmeFiles/MainImage.png)
 
-The product is the desktop application. It can be used to plot different charts based on data downloaded from the university's database.
+The product is a desktop application. It can be used to plot different charts based on data downloaded from the university's database.
 
 #### Features:
 * Importing data in JSON и CSV formats
